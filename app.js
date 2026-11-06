@@ -69,7 +69,7 @@ $('download').onclick=download;
 $('share').onclick=()=>{$('result').toBlob(async blob=>{if(!blob)return;const file=new File([blob],filename,{type:'image/png'});try{if(navigator.canShare?.({files:[file]})){await navigator.share({files:[file],title:'삼성네컷'});return}}catch(e){if(e.name==='AbortError')return}download();msg('사진을 다운로드했어요. 이메일에 PNG 파일을 첨부해 주세요.');},'image/png')};
 $('again').onclick=()=>{stopCamera();photos=[];selected=[];resultImgs=null,activeCut=0,roundShots=[];show(1)};
 
-// 이메일 첨부 발송: Google Apps Script 웹앱 /exec 주소를 아래에 설정하세요.
+// 이메일 첨부 발송: Google Apps Script 웹앱 /exec 주소를 아래에 설정하세요. 
 const EMAIL_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzo7Bu6ze8CC-ooWzQw00uZ7meZ-ipR3GHo_barj3cAeVPOKuy82jcwjHEL-QXKH0cwYw/exec';
 let sendingEmail = false;
 window.addEventListener('message', (event) => {
