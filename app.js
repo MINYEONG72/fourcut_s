@@ -70,7 +70,7 @@ $('share').onclick=()=>{$('result').toBlob(async blob=>{if(!blob)return;const fi
 $('again').onclick=()=>{stopCamera();photos=[];selected=[];resultImgs=null,activeCut=0,roundShots=[];show(1)};
 
 // 이메일 첨부 발송: Google Apps Script 웹앱 /exec 주소를 아래에 설정하세요.
-const EMAIL_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzo7Bu6ze8CC-ooWzQw00uZ7meZ-ipR3GHo_barj3cAeVPOKuy82jcwjHEL-QXKH0cwYw/exec;'
+const EMAIL_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzo7Bu6ze8CC-ooWzQw00uZ7meZ-ipR3GHo_barj3cAeVPOKuy82jcwjHEL-QXKH0cwYw/exec';
 let sendingEmail = false;
 window.addEventListener('message', (event) => {
   if (event.origin !== 'https://script.google.com' && event.origin !== 'https://script.googleusercontent.com') return;
